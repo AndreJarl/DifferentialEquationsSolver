@@ -19,7 +19,7 @@ class Classi extends Component {
 
     // Check for keywords to classify the equation
     const isLinear = equation.includes('d') && equation.includes('y');
-    const isNonlinear = equation.includes(/\^([4-9]|\d{2,})/);
+    const isNonlinear = equation.includes('^3');
     const dependentVariable = equation.includes('y') ? 'y' : 'Unknown';
     const independentVariable = equation.includes('x') ? 'x' : 'Unknown';
 
