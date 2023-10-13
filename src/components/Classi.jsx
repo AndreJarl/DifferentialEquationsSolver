@@ -7,7 +7,6 @@ class Classi extends Component {
       equation: '',
       classification: {
         linearity: 'Unknown',
-        order: 'Unknown',
         degree: 'Unknown',
         dependentVariable: 'Unknown',
         independentVariable: 'Unknown',
@@ -19,19 +18,17 @@ class Classi extends Component {
     const equation = this.state.equation.toLowerCase();
 
     // Check for keywords to classify the equation
-    const isLinear = equation.includes('d') && equation.includes('y') && !equation.includes('y^');
-    const isNonlinear = equation.includes('y') && equation.includes('x');
-    const order = equation.split('d').length - 1;
+    const isLinear = equation.includes('d') && equation.includes('y');
+    const isNonlinear = equation.includes(/\^([4-9]|\d{2,})/);
     const dependentVariable = equation.includes('y') ? 'y' : 'Unknown';
     const independentVariable = equation.includes('x') ? 'x' : 'Unknown';
 
     const degreeMatch = equation.match(/y\^\d+/);
-    const degree = degreeMatch ? degreeMatch[0].match(/\d+/)[0] : 'Unknown';
+    const degree = degreeMatch ? degreeMatch[0].match(/\d+/)[0] : '1';
 
     this.setState({
       classification: {
         linearity: isLinear ? 'Linear' : (isNonlinear ? 'Nonlinear' : 'Unknown'),
-        order: order > 0 ? order : 'Unknown',
         degree,
         dependentVariable,
         independentVariable,
@@ -47,22 +44,25 @@ class Classi extends Component {
     const { classification } = this.state;
 
     return (
-      <div className='flex justify-center items-center flex-col'>
-        <h2 className='text-center text-5xl'>Differential Equation Classifier</h2>
-        <textarea
-          placeholder="Enter a differential equation (e.g., dy/dx = f(x))"
-          value={this.state.equation}
-          onChange={this.handleInputChange}
-        />
-        <button onClick={this.classifyEquation}>Classify</button>
-        <div>
-          <strong>Classification:</strong>
-          <ul>
-            <li>Linearity: {classification.linearity}</li>
-            <li>Order: {classification.order}</li>
-            <li>Degree: {classification.degree}</li>
-            <li>Dependent Variable: {classification.dependentVariable}</li>
-            <li>Independent Variable: {classification.independentVariable}</li>
+      <div className='flex justify-center items-center flex-col mb-10'>
+        <h2 className='text-center text-5xl font-bold py-20 text-red-600'>Differential Equation Classifier</h2>
+      <div className='flex gap-5 pb-10'>
+      <textarea
+            placeholder="Enter a differential equation (e.g., dy/dx = f(x))"
+            value={this.state.equation}
+            onChange={this.handleInputChange}
+            className="border-2 border-black w-[500px] h-10 resize-none text-lg pt-1 pl-2 rounded-lg"
+          />
+        <button className='bg-red-600 px-5 rounded-lg text-white font-semi' onClick={this.classifyEquation}>Classify</button>
+      </div>
+      
+        <div className='mt-10 bg-red-600 rounded-xl w-[900px] p-8 text-white'>
+          <p className='text-center pb-10 font-bold text-4xl'>Classification:</p>
+          <ul className='flex gap-5 flex-col'>
+            <li><span className='font-bold pr-4'>Dependent Variable:</span>{classification.dependentVariable}</li>
+            <li><span className='font-bold pr-4'>Independent Variable:</span> {classification.independentVariable}</li>
+            <li><span className='font-bold pr-4'>Degree:</span> {classification.degree}</li>
+            <li><span className='font-bold pr-4'>Linearity:</span> {classification.linearity}</li>
           </ul>
         </div>
       </div>
