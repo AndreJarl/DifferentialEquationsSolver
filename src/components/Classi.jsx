@@ -10,6 +10,7 @@ class Classi extends Component {
         degree: 'Unknown',
         dependentVariable: 'Unknown',
         independentVariable: 'Unknown',
+        type: 'Unknown',
       },
     };
   }
@@ -22,6 +23,9 @@ class Classi extends Component {
     const isNonlinear = equation.includes('^3');
     const dependentVariable = equation.includes('y') ? 'y' : 'Unknown';
     const independentVariable = equation.includes('x') ? 'x' : 'Unknown';
+   
+    const isPDE = equation.includes('d2y/dx2') || equation.includes('d2y/dt2') || equation.includes('partial');
+    const isODE = equation.includes('dy/dx') || equation.includes('dy/dt');
 
     const degreeMatch = equation.match(/y\^\d+/);
     const degree = degreeMatch ? degreeMatch[0].match(/\d+/)[0] : '1';
@@ -32,6 +36,7 @@ class Classi extends Component {
         degree,
         dependentVariable,
         independentVariable,
+        type: isPDE ? 'Partial Differential Equation' : (isODE ? 'Ordinary Differential Equation' : 'Unknown'),
       },
     });
   };
@@ -63,6 +68,7 @@ class Classi extends Component {
             <li><span className='font-bold pr-4'>Independent Variable:</span> {classification.independentVariable}</li>
             <li><span className='font-bold pr-4'>Degree:</span> {classification.degree}</li>
             <li><span className='font-bold pr-4'>Linearity:</span> {classification.linearity}</li>
+            <li><span className='font-bold pr-4'>Type:</span> {classification.type}</li>
           </ul>
         </div>
       </div>
