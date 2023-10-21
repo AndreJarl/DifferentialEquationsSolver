@@ -16,19 +16,20 @@ function SeparableVariable() {
       // You can write your own equation-solving logic here.
       // For a general separable variable equation, we can assume dP/dt = k * P.
       const finalValue = initial * Math.exp(constant * time);
-      setResult(`Result: ${finalValue.toFixed(2)}`);
+      setResult(`${finalValue.toFixed(2)}`);
     } else {
       setResult('Invalid Input');
     }
   };
 
   return (
-    <div>
-      <h2>Separable Variable Equation Solver</h2>
+    <div className='flex justify-center items-center flex-col gap-10 pt-10'>
+      <h2 className='text-6xl font-bold text-red-600 pb-10'>GROWTH AND DECAY</h2>
+      <p className='text-center text-red-400 text-2xl font-semibold scroll -mt-16 pb-5'>Input given values:</p>
       <div>
-        <label>
+        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
           Initial Value (P0):
-          <input
+          <input  className='text-black font-normal border border-black text-center'
             type="number"
             value={P0}
             onChange={(e) => setP0(e.target.value)}
@@ -36,9 +37,9 @@ function SeparableVariable() {
         </label>
       </div>
       <div>
-        <label>
-          Rate Constant (k):
-          <input
+        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
+          Rate Constant (k):     
+          <input className='text-black font-normal border border-black text-center'
             type="number"
             step="0.000001"
             value={k}
@@ -47,17 +48,17 @@ function SeparableVariable() {
         </label>
       </div>
       <div>
-        <label>
+        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
           Time Variable (t):
-          <input
+          <input  className='text-black font-normal border border-black text-center'
             type="number"
             value={t}
             onChange={(e) => setT(e.target.value)}
           />
         </label>
       </div>
-      <button onClick={solveEquation}>Solve</button>
-      <div>
+      <button className='bg-red-600 px-5 py-1 text-white font-semibold rounded-md text-xl' onClick={solveEquation}>Solve</button>
+      <div className='bg-red-600 text-white w-96 text-center py-5 mb-10 text-xl font-bold flex justify-center gap-4'> Answer : 
         {result && <p>{result}</p>}
       </div>
     </div>

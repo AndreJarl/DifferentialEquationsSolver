@@ -56,8 +56,8 @@ const Classi = () => {
         <button className='bg-red-600 px-5 rounded-lg text-white font-semi' onClick={classifyEquation}>Classify</button>
       </div>
       <div>
-        <p>Text in the text area:</p>
-        <p>{eq}</p>
+        <p>Differential Equation:</p>
+        <p className='text-center'>{eq}</p>
       </div>
       <div className='mt-10 bg-red-600 rounded-xl w-[900px] p-8 text-white'>
         <p className='text-center pb-10 font-bold text-4xl'>Classification:</p>
