@@ -17,7 +17,7 @@ function SeparableVariable() {
     if (!isNaN(initial) && !isNaN(pia) && !isNaN(time)) {
       const constant =  Math.log(pia / initial) / time;
       const finalValue = initial * Math.exp(constant * time);
-      setResult(`Final Value: ${finalValue.toFixed(2)}`);
+      setResult(`Population: ${finalValue.toFixed(2)}`);
       setK(`Rate Constant (k): ${constant}`);
     } else {
       setResult('Invalid Input');
@@ -84,7 +84,7 @@ function SeparableVariable() {
         <div>
           {result && <p> {result}</p>}
         </div>
-        
+
       </div>
     </div>
   );
