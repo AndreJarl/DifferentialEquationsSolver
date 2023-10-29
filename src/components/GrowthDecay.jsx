@@ -1,24 +1,27 @@
 import React, { useState } from 'react';
 
 function SeparableVariable() {
-  const [P0, setP0] = useState(''); // Initial value
-  const [k, setK] = useState(''); // Rate constant
-  const [t, setT] = useState(''); // Time variable
+  const [P0, setP0] = useState('');
+  const [pt, setPt] = useState('');
+  const [t, setT] = useState('');
+  const [t2, setT2] = useState('');
   const [result, setResult] = useState(null);
+  const [k, setK] = useState(null);
 
   const solveEquation = () => {
-    // Parse input values as numbers
     const initial = parseFloat(P0);
-    const constant = parseFloat(k);
+    const pia = parseFloat(pt);
     const time = parseFloat(t);
+    const time2 = parseFloat(t2);
 
-    if (!isNaN(initial) && !isNaN(constant) && !isNaN(time)) {
-      // You can write your own equation-solving logic here.
-      // For a general separable variable equation, we can assume dP/dt = k * P.
+    if (!isNaN(initial) && !isNaN(pia) && !isNaN(time)) {
+      const constant =  Math.log(pia / initial) / time;
       const finalValue = initial * Math.exp(constant * time);
-      setResult(`${finalValue.toFixed(2)}`);
+      setResult(`Final Value: ${finalValue.toFixed(2)}`);
+      setK(`Rate Constant (k): ${constant}`);
     } else {
       setResult('Invalid Input');
+      setK('Invalid Input');
     }
   };
 
@@ -29,7 +32,8 @@ function SeparableVariable() {
       <div>
         <label className='text-xl font-semibold text-red-400 gap-6 flex'>
           Initial Value (P0):
-          <input  className='text-black font-normal border border-black text-center'
+          <input
+            className='text-black font-normal border border-black text-center'
             type="number"
             value={P0}
             onChange={(e) => setP0(e.target.value)}
@@ -38,28 +42,49 @@ function SeparableVariable() {
       </div>
       <div>
         <label className='text-xl font-semibold text-red-400 gap-6 flex'>
-          Rate Constant (k):     
-          <input className='text-black font-normal border border-black text-center'
+          Population at the time (Pt):
+          <input
+            className='text-black font-normal border border-black text-center'
             type="number"
-            step="0.000001"
-            value={k}
-            onChange={(e) => setK(e.target.value)}
+            value={pt}
+            onChange={(e) => setPt(e.target.value)}
           />
         </label>
       </div>
       <div>
         <label className='text-xl font-semibold text-red-400 gap-6 flex'>
           Time Variable (t):
-          <input  className='text-black font-normal border border-black text-center'
+          <input
+            className='text-black font-normal border border-black text-center'
             type="number"
             value={t}
             onChange={(e) => setT(e.target.value)}
           />
         </label>
       </div>
+      <div>
+        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
+          Time req (t2):
+          <input
+            className='text-black font-normal border border-black text-center'
+            type="number"
+            value={t2}
+            onChange={(e) => setT2(e.target.value)}
+          />
+        </label>
+      </div>
+
       <button className='bg-red-600 px-5 py-1 text-white font-semibold rounded-md text-xl' onClick={solveEquation}>Solve</button>
-      <div className='bg-red-600 text-white w-96 text-center py-5 mb-10 text-xl font-bold flex justify-center gap-4'> Answer : 
-        {result && <p>{result}</p>}
+      <div className='bg-red-600 text-white w-96 text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4'> 
+    
+        <div>
+          {k && <p>{k}</p>}
+        </div>
+
+        <div>
+          {result && <p> {result}</p>}
+        </div>
+        
       </div>
     </div>
   );
