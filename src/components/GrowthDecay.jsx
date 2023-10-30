@@ -7,6 +7,7 @@ function SeparableVariable() {
   const [t2, setT2] = useState('');
   const [result, setResult] = useState(null);
   const [k, setK] = useState(null);
+  const [dp, setDp] = useState(null);
 
   const solveEquation = () => {
     const initial = parseFloat(P0);
@@ -16,12 +17,15 @@ function SeparableVariable() {
 
     if (!isNaN(initial) && !isNaN(pia) && !isNaN(time)) {
       const constant =  Math.log(pia / initial) / time;
-      const finalValue = initial * Math.exp(constant * time);
-      setResult(`Population: ${finalValue.toFixed(2)}`);
+      const finalValue =  initial * Math.exp(constant * time2);
+      const dpdt = initial * constant * Math.exp(constant * time2); 
+      setResult(`Population: ${finalValue.toFixed(3)}`);
       setK(`Rate Constant (k): ${constant}`);
+      setDp(`dP/dt: ${dpdt}`);
     } else {
       setResult('Invalid Input');
       setK('Invalid Input');
+      setDp('Invalid Input');
     }
   };
 
@@ -83,6 +87,10 @@ function SeparableVariable() {
 
         <div>
           {result && <p> {result}</p>}
+        </div>
+
+        <div>
+          {dp && <p> {dp}</p>}
         </div>
 
       </div>
