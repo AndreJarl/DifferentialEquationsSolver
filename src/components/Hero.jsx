@@ -10,7 +10,7 @@ function Hero(){
                         <p className="text-center sm:text-5xl font-bold text-red-600 sm:m-5">DIFFERENTIAL EQUATIONS</p>
                         <p className="text-center lg:mx-14 sm:mx-4 sm:pb-2 text-lg font-semibold text-gray-700">Classifications, Elimination of Arbitrary Constants, Application of Seperable Variable and many more.....</p>
                         <p className="text-center sm:text-lg font-semibold">Group 3 Final Project</p>
-                        <button className="bg-red-600 hover:bg-red-400 px-11 py-2 mt-2 text-xl text-white font-semibold rounded-xl">Solve Equations ></button>
+                        <a href="#class"><button className="bg-red-600 hover:bg-red-400 px-11 py-2 mt-2 text-xl text-white font-semibold rounded-xl">Solve Equations ></button></a>
                     </div>
                    <img className="sm:w-96 lg:w-[500px] "  src={hero} alt="" srcset="" />
                    

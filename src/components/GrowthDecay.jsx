@@ -20,8 +20,8 @@ function SeparableVariable() {
       const finalValue =  initial * Math.exp(constant * time2);
       const dpdt = initial * constant * Math.exp(constant * time2); 
       setResult(`Population: ${finalValue.toFixed(3)}`);
-      setK(`Rate Constant (k): ${constant}`);
-      setDp(`dP/dt: ${dpdt}`);
+      setK(`Rate Constant (k): ${constant.toFixed(5)}`);
+      setDp(`dP/dt: ${dpdt.toFixed(3)}`);
     } else {
       setResult('Invalid Input');
       setK('Invalid Input');
@@ -30,14 +30,16 @@ function SeparableVariable() {
   };
 
   return (
-    <div className='flex justify-center items-center flex-col gap-10 pt-10'>
-      <h2 className='text-6xl font-bold text-red-600 pb-10'>GROWTH AND DECAY</h2>
-      <p className='text-center text-red-400 text-2xl font-semibold scroll -mt-16 pb-5'>Input given values:</p>
+    <div id='growth' className='flex items-center justify-center flex-col gap-10 pt-28 mx-20'>
+      <h2 className='text-center text-6xl font-bold text-red-600 pb-10'>GROWTH AND DECAY</h2>
+      <p className='text-center text-red-400 text-2xl font-semibold scroll  pb-5'>Given:</p>
+   <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
+    
       <div>
-        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
+        <label className='text-xl font-semibold text-red-400 gap-3 flex'>
           Initial Value (P0):
           <input
-            className='text-black font-normal border border-black text-center'
+            className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
             type="number"
             value={P0}
             onChange={(e) => setP0(e.target.value)}
@@ -45,41 +47,45 @@ function SeparableVariable() {
         </label>
       </div>
       <div>
-        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
-          Population at the time (Pt):
+        <label className='text-xl font-semibold text-red-400 gap-3 flex'>
+          @t (years):
           <input
-            className='text-black font-normal border border-black text-center'
-            type="number"
-            value={pt}
-            onChange={(e) => setPt(e.target.value)}
-          />
-        </label>
-      </div>
-      <div>
-        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
-          Time Variable (t):
-          <input
-            className='text-black font-normal border border-black text-center'
+            className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
             type="number"
             value={t}
             onChange={(e) => setT(e.target.value)}
           />
         </label>
       </div>
+      </div>
+      <p className=' text-red-400 text-2xl font-semibold scroll  pb-5'>Req'd:</p>
+      <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
       <div>
-        <label className='text-xl font-semibold text-red-400 gap-6 flex'>
-          Time req (t2):
+        <label className='text-xl font-semibold text-red-400 gap-3 flex'>
+          Population at the time (Pt):
           <input
-            className='text-black font-normal border border-black text-center'
+            className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
+            type="number"
+            value={pt}
+            onChange={(e) => setPt(e.target.value)}
+          />
+        </label>
+      </div>
+
+      <div>
+        <label className='text-xl font-semibold text-red-400 gap-3 flex'>
+          @t (years):
+          <input
+            className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
             type="number"
             value={t2}
             onChange={(e) => setT2(e.target.value)}
           />
         </label>
       </div>
-
-      <button className='bg-red-600 px-5 py-1 text-white font-semibold rounded-md text-xl' onClick={solveEquation}>Solve</button>
-      <div className='bg-red-600 text-white w-96 text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4'> 
+     </div>
+      <button className='bg-red-600 px-5 py-1 flex justify-center items-center text-white font-semibold rounded-md text-xl' onClick={solveEquation}>Solve</button>
+      <div className='bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
     
         <div>
           {k && <p>{k}</p>}
@@ -99,3 +105,4 @@ function SeparableVariable() {
 }
 
 export default SeparableVariable;
+

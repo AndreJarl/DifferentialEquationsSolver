@@ -11,9 +11,8 @@ function Navbar(){
             <h1 className='text-4xl lg:hidden sm:block'><AiOutlineMenu /></h1>
             <div className="pt-9 pr-10 sm:hidden lg:block">
                
-                <ul className="lg:flex lg:gap-20 items-center text-lg font-semibold">
+                <ul className="lg:flex lg:gap-28 items-center text-lg font-semibold">
                     <a href=""><li className="mb-10 hover:underline">Home</li></a>
-                    <a href=""><li className="mb-10 hover:underline">Calculate</li></a>
                     <a href=""><li className="mb-10 hover:underline">About</li></a>
                     <a href=""><li className="mb-10 text-3xl hover:text-red-400"><AiOutlineQuestionCircle/></li></a>
 

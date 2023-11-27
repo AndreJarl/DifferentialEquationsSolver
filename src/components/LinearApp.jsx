@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function App() {
   const [Q, setQ] = useState(0);
-  const [initialAdditive, setInitialAdditive] = useState(100);
+  const [initialAdditive, setInitialAdditive] = useState();
   const [inflowRate, setInflowRate] = useState(2);
   const [initialVolume, setInitialVolume] = useState(2000);
   const [time, setTime] = useState(20);
@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className='flex justify-center items-center flex-col gap-10 pt-10'>
       <h1>Linear Differential Equation Solver</h1>
       <div>
         <label>
