@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "math.js": "^1.1.46",
+    "mathjs": "^12.1.0",
+    "nerdamer": "^1.1.13",
     "plotly.js": "^2.26.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

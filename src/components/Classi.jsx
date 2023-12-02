@@ -21,7 +21,7 @@ const Classi = () => {
     const independentVariable = equationLower.includes('x') ? 'x' : 'Unknown';
 
     const isPDE = equationLower.includes('dy/d') && !equationLower.includes('dy/dx');
-    const isODE = equationLower.includes('dy/dx') || equationLower.includes('y"') || equationLower.includes("y'");
+    const isODE = equationLower.includes('dy/dx') || equationLower.includes('y"') || equationLower.includes("y'") || equationLower.includes('dy') || equationLower.includes('dx') ;
     
 
     // const degreeMatch = equationLower.match(/y\^\d+/);
