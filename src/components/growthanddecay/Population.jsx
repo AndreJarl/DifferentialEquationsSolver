@@ -11,16 +11,16 @@ function SeparableVariable() {
 
   const solveEquation = () => {
     const initial = parseFloat(P0);
-    const pia = parseFloat(pt);
+    const pt2 = parseFloat(pt);
     const time = parseFloat(t);
     const time2 = parseFloat(t2);
 
-    if (!isNaN(initial) && !isNaN(pia) && !isNaN(time)) {
-      const constant =  Math.log(pia / initial) / time;
+    if (!isNaN(initial) && !isNaN(pt2) && !isNaN(time)) {
+      const constant =  Math.log(pt2 / initial) / time;
       const finalValue =  initial * Math.exp(constant * time2);
       const dpdt = initial * constant * Math.exp(constant * time2); 
       setResult(`Population: ${finalValue.toFixed(3)}`);
-      setK(`Rate Constant (k): ${constant.toFixed(5)}`);
+      setK(`Rate Constant (k): ${constant.toFixed(20)}`);
       setDp(`dP/dt: ${dpdt.toFixed(3)} per year`);
     } else {
       setResult('Invalid Input');
