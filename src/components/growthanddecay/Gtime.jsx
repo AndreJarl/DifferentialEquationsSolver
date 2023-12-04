@@ -31,7 +31,7 @@ const GrowthTimeCalculator = () => {
     const parsedGrowthRate = parseFloat(growthRate);
 
     // Calculate time (t)
-    const timeInYears = Math.log( parsedInitialValue / parsedTargetValue) / parsedGrowthRate;
+    const timeInYears = -Math.log( parsedInitialValue / parsedTargetValue) / parsedGrowthRate;
 
     // Convert time to centuries
     const timeInCenturies = timeInYears / 100;

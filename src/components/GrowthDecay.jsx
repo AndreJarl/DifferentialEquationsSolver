@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Ginitial from "./Ginitial";
-import Gtime from "./Gtime";
-import Population from "./Population";
+import Ginitial from "./growthanddecay/Ginitial";
+import Gtime from "./growthanddecay/Gtime";
+import Population from "./growthanddecay/Population";
 
 function GrowthDecay() {
   const [cate, setCate] = useState("population"); // Add state for the selected value
