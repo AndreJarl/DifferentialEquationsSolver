@@ -3,9 +3,7 @@ import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Classification from "./components/Classi"
 import GrowthDecay from "./components/GrowthDecay"
-import Linear from "./components/LinearApp"
-import Gtime from "./components/Gtime"
-import Ginitial from "./components/Ginitial"
+import Newton from "./components/NewtonLaw"
 function Home(){
      return (
         <>
@@ -13,6 +11,7 @@ function Home(){
         <Hero/>
         <Classification/>
         <GrowthDecay/>
+        <Newton/>
         <Footer/>
         </>
      )
