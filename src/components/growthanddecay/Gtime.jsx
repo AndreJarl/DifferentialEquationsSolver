@@ -76,9 +76,16 @@ const GrowthTimeCalculator = () => {
         />
       </label>
       <button className='bg-red-600 px-5 py-1 flex justify-center items-center text-white font-semibold rounded-md text-xl' onClick={calculateTime}>Calculate Time</button>
-      <div className='bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
+      <div className=' rounded-xl bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
       {result && (
         <div>
+          <p className='pb-5'>
+            {`Sol'n: `} <br/>
+            {`P = ce^k(t)`}<br/>
+             {`@t = 0, P = ${initialValue}`} <br/>
+             {`@t = ?, P =${targetValue}`}<br/>
+             {`${targetValue} = ${initialValue}e^${growthRate}(t)`}
+          </p>
           <p>Time (t) in years: {result.timeInYears.toFixed(2)}</p>
           <p>Time (t) in centuries: {result.timeInCenturies.toFixed(2)}</p>
         </div>
