@@ -38,8 +38,16 @@ function SeparableVariable() {
   return (
     <div id='growth' className='flex items-center justify-center flex-col gap-10 pt-10 mx-20'>
       <p className='text-center text-red-400 text-xl font-semibold scroll  pb-5'>Given:</p>
-   <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
-    
+      <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
+      <div>
+        <label className='text-lg font-semibold text-red-400 gap-3 flex'>
+          @t(years):
+          <input
+            className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
+            type="number"
+          />
+        </label>
+      </div>
       <div>
         <label className='text-lg font-semibold text-red-400 gap-3 flex'>
           Initial Value (P0):
@@ -51,6 +59,10 @@ function SeparableVariable() {
           />
         </label>
       </div>
+      </div>
+   <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
+    
+     
       <div>
         <label className='text-lg font-semibold text-red-400 gap-3 flex'>
           @t (years):
@@ -62,9 +74,6 @@ function SeparableVariable() {
           />
         </label>
       </div>
-      </div>
-      <p className=' text-red-400 text-xl font-semibold scroll  pb-5'>Req'd:</p>
-      <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
       <div>
         <label className='text-lg font-semibold text-red-400 gap-3 flex'>
           Population at the time (Pt):
@@ -76,6 +85,10 @@ function SeparableVariable() {
           />
         </label>
       </div>
+      </div>
+      <p className=' text-red-400 text-xl font-semibold scroll  pb-5'>Req'd:</p>
+      <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
+     
 
       <div>
         <label className='text-lg font-semibold text-red-400 gap-3 flex'>
@@ -87,6 +100,10 @@ function SeparableVariable() {
             onChange={(e) => setT2(e.target.value)}
           />
         </label>
+      </div>
+
+      <div>
+        <p className='text-xl font-bold text-red-500'>P = ?</p>
       </div>
      </div>
       <button className='bg-red-600 px-5 py-1 flex justify-center items-center text-white font-semibold rounded-md text-xl' onClick={solveEquation}>Solve</button>
