@@ -3,7 +3,7 @@ import hero from "../assets/hero.png"
 function Hero(){
     return (
         <>
-        <div className="lg:-mt-0 sm:pt-40 lg:pt-20 mx-10 flex justify-center items-center ">
+        <div id="hero" className="lg:-mt-0 sm:pt-40 lg:pt-20 mx-10 flex justify-center items-center ">
             <div className="flex justify-center items-center gap-4 flex-row sm:flex-col mb-5">
                 <div className="flex gap-5 lg:flex-row sm:flex-col justify-center items-center">
                   <div className="flex sm:flex-col justify-center items-center gap-3 lg:-mt-14">

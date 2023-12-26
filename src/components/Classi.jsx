@@ -47,7 +47,7 @@ const Classi = () => {
   };
 
   return (
-    <div id="class" className='flex justify-center items-center flex-col mb-10 px-11 pt-5 '>
+    <div id="class" className='flex justify-center items-center flex-col mb-10 px-11 pt-10 '>
       <h2 className='text-center text-5xl font-bold py-20 text-red-600'>Differential Equation Classifier</h2>
       <div className='flex flex-col gap-5 justify-center items-center lg:flex lg:flex-row lg:items-center lg:mb-10'>
        

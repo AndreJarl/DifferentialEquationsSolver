@@ -1,49 +1,41 @@
 import { AiOutlineMenu, AiOutlineQuestionCircle } from 'react-icons/ai';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [showSolveMenu, setShowSolveMenu] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
+  const handleSolveClick = () => {
+    setShowSolveMenu(!showSolveMenu);
   };
 
-  useEffect(() => {
-    // Function to handle scroll event
-    const handleScroll = () => {
-      const scrolled = window.scrollY > 0;
-      setIsScrolled(scrolled);
-    };
-
-    // Attach event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
-
-    // Detach event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const navbarStyle = {
-    backgroundColor: isScrolled ? 'transparent' : 'transparent', // Change background color as needed
-    borderBottom: isScrolled ? '2px solid red' : 'none', // Add red border bottom when scrolled
-    transition: 'background-color 0.3s ease, border-bottom 0.3s ease', // Add transition effect
-    zIndex: 1000,
+  const handleMenuItemClick = () => {
+    setShowSolveMenu(false);
   };
 
   return (
     <>
-       <div>
+      <div className='bg-red-500 fixed w-screen'>
+        <div className='bg-red-500 flex gap-4 mx-5 my-10 items-center justify-between lg:gap-60 lg:mx-36 lg:my-5'>
+          <div className=''>
+            <a href="#hero"><p className='text-4xl font-bold text-white cursor-pointer lg:text-5xl'>DECALC</p></a>
+          </div>
           <div>
-            <div>
-
-            </div>
-            <ul>
-              <li></li>
+            <ul className='flex gap-10 list-none font-bold text-white text-lg lg:gap-28 lg:text-xl'>
+              <div onClick={handleSolveClick}>
+                <li className='hover:text-black hover:cursor-pointer'>Solve</li>
+                {showSolveMenu && (
+                  <div className='absolute bg-red-200 h-70 text-base px-5 justify-center items-center pb-10 -ml-28 rounded-xl mt-6 text-red-800'>
+                    <a href="#class"><li className='pt-10' onClick={handleMenuItemClick}>Classification</li></a>
+                    <a href="#growth"><li className='pt-10' onClick={handleMenuItemClick}>Growth and Decay</li></a>
+                    <a href="#newton"><li className='pt-10' onClick={handleMenuItemClick}>Newton's Law Cooling/Heating</li></a>
+                  </div>
+                )}
+              </div>
+              <li className='hover:text-black hover:cursor-pointer'>About</li>
             </ul>
           </div>
-       </div>
+        </div>
+      </div>
     </>
   );
 }
