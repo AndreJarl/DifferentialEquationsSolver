@@ -93,6 +93,36 @@ const CoolingHeatingTimeCalculator = () => {
       >
         Calculate
       </button>
+      {/* <div className='rounded-xl bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
+
+<div className={`solution ${showSolution ? 'visible' : 'hidden'}`}> 
+   <div className='flex flex-col justify-center gap-10 pb-10 pt-10 sm:text-lg'>
+   <div className='flex gap-10  justify-center'>
+            <p>Given: </p>
+            <p>{`@t = 0, T = ${initialTemperature}, Tm = ${ambientTemperature}`}<br/>
+               {`@t = ${timeAtOneMinute}, T = ${temperatureAtOneMinute} `}
+            </p>
+       </div>
+       <div className='flex gap-10  justify-center'>
+            <p>Req'd: </p>
+            <p>{`@t = ${timeAtFiveMinutes}, T = ?`}<br/>
+             
+            </p>
+       </div>
+       <div className='flex gap-10  justify-center text-base'>
+            <p>Sol'n: </p>
+            <p>{`T =  Tm + Ce^kt`}<br/>
+            {`${initialTemperature} = ${ambientTemperature} + Ce^k(0), C = ${result?.c}`}<br/>
+            {`@t = ${timeAtOneMinute}, T = ${temperatureAtOneMinute} `}<br/>
+            {`${temperatureAtOneMinute} = ${ambientTemperature}${result?.c}e^k(1), k = ?`}<br/>
+            {`T = ${ambientTemperature} ${result?.c}e^${result?.k}(t)`}<br/>
+            {`@t = ${timeAtFiveMinutes}, T = ?`}<br/>
+            {`T = ${ambientTemperature} ${result?.c}e^${result?.k}(t)`}
+            </p>
+       </div>
+
+</div>
+</div> */}
       {result && (
        <div className='bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
           <p>Constant (k): {result.k}</p>
@@ -100,6 +130,7 @@ const CoolingHeatingTimeCalculator = () => {
         </div>
       )}
     </div>
+    
   );
 };
 

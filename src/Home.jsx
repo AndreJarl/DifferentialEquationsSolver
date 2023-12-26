@@ -4,6 +4,8 @@ import Hero from "./components/Hero"
 import Classification from "./components/Classi"
 import GrowthDecay from "./components/GrowthDecay"
 import Newton from "./components/NewtonLaw"
+
+
 function Home(){
      return (
         <>

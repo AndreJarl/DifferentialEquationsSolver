@@ -54,18 +54,7 @@ const Ginitial = () => {
   return (
     <div className='flex flex-col justify-center items-center pt-20 gap-16 text-lg text-red-400 font-bold'>
       <div className='flex flex-col gap-10 lg:flex lg:flex-row'>
-      <label className='flex gap-5 '>
-        P =
-        <input
-          className='text-center'
-          type="text"
-          value={populationAtTime1}
-          onChange={handlePopulationAtTime1Change}
-          placeholder=""
-          style={{ border: '1px solid black', color: 'black', textAlign: 'center', fontWeight: 'normal'}} // Apply default border style
-
-        />
-      </label>
+      
       <label className='flex gap-5'>
         @t =
         <input
@@ -78,8 +67,35 @@ const Ginitial = () => {
 
         />
       </label>
+
+      <label className='flex gap-5 '>
+        P =
+        <input
+          className='text-center'
+          type="text"
+          value={populationAtTime1}
+          onChange={handlePopulationAtTime1Change}
+          placeholder=""
+          style={{ border: '1px solid black', color: 'black', textAlign: 'center', fontWeight: 'normal'}} // Apply default border style
+
+        />
+      </label>
       </div>
       <div className='flex flex-col gap-10 lg:flex lg:flex-row'>
+     
+      <label className='flex gap-5'>
+        @t =
+        <input
+          type="text"
+          className='text-center'
+          value={time2}
+          onChange={handleTime2Change}
+          placeholder=""
+          style={{ border: '1px solid black', color: 'black', textAlign: 'center', fontWeight: 'normal' }} // Apply default border style
+
+        />
+      </label>
+
       <label className='flex gap-5'>
         P =
         <input
@@ -89,18 +105,6 @@ const Ginitial = () => {
           onChange={handlePopulationAtTime2Change}
           placeholder=""
           style={{ border: '1px solid black', color: 'black', textAlign: 'center', fontWeight: 'normal'}} // Apply default border style
-
-        />
-      </label>
-      <label className='flex gap-5'>
-        @t =
-        <input
-          type="text"
-          className='text-center'
-          value={time2}
-          onChange={handleTime2Change}
-          placeholder=""
-          style={{ border: '1px solid black' }} // Apply default border style
 
         />
       </label>
