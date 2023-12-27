@@ -38,7 +38,7 @@ const CoolingHeatingCalculator = () => {
     <div className='flex flex-col justify-center items-center pt-20 gap-16 text-lg text-red-400 font-bold'>
             <p className='text-center text-red-400 text-xl font-semibold scroll '>Given:</p>
  <div className='flex flex-col gap-10 lg:flex lg:flex-row'>
-      <label className='flex gap-5 flex-col'>
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
       T=
         <input
           type="number"
@@ -49,7 +49,7 @@ const CoolingHeatingCalculator = () => {
         />
       </label>
       
-      <label className='flex gap-5 flex-col'>
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
                 Tm =
         <input
           type="number"
@@ -61,7 +61,7 @@ const CoolingHeatingCalculator = () => {
       </label>
       </div>
       <div className='flex flex-col gap-10 lg:flex lg:flex-row'>
-      <label className='flex gap-5 flex-col'>
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
                 @t1 = 
         <input
         
@@ -72,7 +72,7 @@ const CoolingHeatingCalculator = () => {
 
         />
       </label>
-      <label className='flex gap-5 flex-col'>
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
                 T =
         <input
           type="number"
@@ -85,7 +85,7 @@ const CoolingHeatingCalculator = () => {
       </div>
       <p className=' text-red-400 text-xl font-semibold scroll   pb-2'>Req'd:</p>
       <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
-      <label className='flex gap-5 flex-col'>
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
         @t2 =  
         <input
           type="number"
@@ -98,7 +98,7 @@ const CoolingHeatingCalculator = () => {
       <p>T = ?</p>
       </div>
       <button className='bg-red-600 px-5 py-1 flex justify-center items-center text-white font-semibold rounded-md text-xl' onClick={calculateTemperature}>Calculate</button>
-      <div className='rounded-xl bg-red-600 text-white min-w-[250px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
+      <div className=' px-5 rounded-xl bg-red-600 text-white min-w-[250px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
 
       <div className={`solution ${showSolution ? 'visible' : 'hidden'}`}> 
          <div className='flex flex-col justify-center gap-10 pb-10 pt-10 sm:text-lg'>

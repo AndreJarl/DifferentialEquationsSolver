@@ -42,7 +42,7 @@ const GrowthTimeCalculator = () => {
   return (
     <div className='flex flex-col justify-center items-center pt-20 gap-16 text-lg text-red-400 font-bold'>
       
-      <label className='flex gap-5 '>
+      <label className='flex flex-col gap-5 lg:flex lg:flex-row'>
         Initial Value:
         <input
          className='text-center'
@@ -53,7 +53,7 @@ const GrowthTimeCalculator = () => {
 
         />
       </label>
-      <label className='flex gap-5 '>
+      <label className='flex flex-col gap-5 lg:flex lg:flex-row'>
         Target Value:
         <input
           className='text-center'
@@ -64,7 +64,7 @@ const GrowthTimeCalculator = () => {
 
         />
       </label>
-      <label className='flex gap-5 '>
+      <label className='flex flex-col gap-5 lg:flex lg:flex-row'>
         Growth Rate:
         <input
           className='text-center'
@@ -76,7 +76,7 @@ const GrowthTimeCalculator = () => {
         />
       </label>
       <button className='bg-red-600 px-5 py-1 flex justify-center items-center text-white font-semibold rounded-md text-xl' onClick={calculateTime}>Calculate Time</button>
-      <div className=' rounded-xl bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
+      <div className=' px-5 rounded-xl bg-red-600 text-white min-w-[250px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
       {result && (
         <div>
           <p className='pb-5'>

@@ -96,7 +96,7 @@ const CoolingHeatingTimeCalculator = () => {
       >
         Calculate
       </button>
-      <div className='rounded-xl bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
+      <div className='px-5 rounded-xl bg-red-600 text-white min-w-[250px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
 
    <div className={`solution ${showSolution ? 'visible' : 'hidden'}`}> 
    <div className='flex flex-col justify-center gap-10 pb-10 pt-10 sm:text-lg'>
