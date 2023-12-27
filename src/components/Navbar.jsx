@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logo.png'
 function Navbar() {
   const [showSolveMenu, setShowSolveMenu] = useState(false);
 
@@ -17,8 +17,8 @@ function Navbar() {
       <div className='bg-red-500 fixed w-screen'>
         <div className='bg-red-500 flex gap-4 mx-5 my-10 items-center justify-between lg:gap-60 lg:mx-36 lg:my-5 md:flex md:gap-10 md:mx-32'>
           <div className=''>
-            
-              <Link to="/"><p className='text-4xl font-bold text-white cursor-pointer lg:text-5xl'>DESolver</p></Link>
+          {/* <p className='text-4xl font-bold text-white cursor-pointer lg:text-5xl'>DESolver</p> */}
+              <Link to="/"><img className='w-48' src={logo} alt="" srcset="" /></Link>
              
           </div>
           
