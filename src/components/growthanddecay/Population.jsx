@@ -22,7 +22,7 @@ function SeparableVariable() {
       const finalValue =  initial * Math.exp(constant * time2);
       const dpdt = initial * constant * Math.exp(constant * time2); 
       setResult(`Population: ${finalValue.toFixed(3)}`);
-      setK(`Rate Constant (k): ${constant.toFixed(6)}`);
+      setK(`Rate Constant (k): ${constant.toFixed(10)}`);
       setDp(`dP/dt: ${dpdt.toFixed(3)} per year`);
       setShowSolution(true); // Set showSolution to true when the button is clicked
 

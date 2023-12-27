@@ -45,7 +45,7 @@ const Ginitial = () => {
 
     // Calculate initial population (P0)
     const calculatedInitialPopulation = parsedPopulationAtTime1 / Math.exp(parsedTime1 * k);
-    setK(k.toFixed(6));
+    setK(k.toFixed(10));
     setInitialPopulation(calculatedInitialPopulation.toFixed(2));
     setShowSolution(true); // Set showSolution to true when the button is clicked
 

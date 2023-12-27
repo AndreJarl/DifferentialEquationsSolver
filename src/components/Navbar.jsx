@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <>
       <div className='bg-red-500 fixed w-screen'>
-        <div className='bg-red-500 flex gap-4 mx-5 my-10 items-center justify-between lg:gap-60 lg:mx-36 lg:my-5'>
+        <div className='bg-red-500 flex gap-4 mx-5 my-10 items-center justify-between lg:gap-60 lg:mx-36 lg:my-5 md:flex md:gap-10 md:mx-32'>
           <div className=''>
           <a href="#hero"> <Link to="/"><p className='text-4xl font-bold text-white cursor-pointer lg:text-5xl'>DESolver</p></Link></a>
           </div>
