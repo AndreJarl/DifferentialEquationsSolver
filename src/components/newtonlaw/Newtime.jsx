@@ -33,7 +33,7 @@ const CoolingHeatingTimeCalculator = () => {
   return (
     <div className='flex flex-col justify-center items-center pt-20 gap-16 text-lg text-red-400 font-bold'>
       <div className='flex flex-col gap-10 lg:flex lg:flex-row'>
-      <label className='flex gap-5 '>
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
           T = 
           <input
             type="number"
@@ -43,7 +43,7 @@ const CoolingHeatingTimeCalculator = () => {
 
           />
         </label>
-        <label className='flex gap-5 '>
+        <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
           Tm = 
           <input
             type="number"
@@ -56,7 +56,7 @@ const CoolingHeatingTimeCalculator = () => {
       </div>
       <div className="flex flex-col lg:flex-row gap-4">
 
-      <label className='flex gap-5 '>
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
           @t =
           <input
             type="number"
@@ -66,7 +66,7 @@ const CoolingHeatingTimeCalculator = () => {
 
           />
         </label>
-        <label className='flex gap-5 '>
+        <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
           T =
           <input
             type="number"
@@ -79,7 +79,7 @@ const CoolingHeatingTimeCalculator = () => {
     
       </div>
       <div className="flex items-center gap-2">
-        <label className="flex items-center gap-2">
+      <label className='flex gap-5 flex-col lg:flex lg:flex-row'>
           T = 
           <input
             type="number"
