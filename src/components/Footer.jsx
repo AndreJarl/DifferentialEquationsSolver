@@ -1,7 +1,8 @@
 
 import React from 'react'
 import { AiFillLinkedin, AiFillFacebook, AiFillGithub} from 'react-icons/ai';
-
+import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
        <div className="flex flex-col content-between items-center gap-3 mb-5 mt-4 lg:flex lg:flex-row lg:gap-72 text-white">
             
                 <div className="">
-                  <h1 className='text-4xl font-bold text-white'>DESolver</h1>
+                <Link to="/"><img className='w-48' src={logo} alt="" srcset="" /></Link>
                 </div>
               
                 <div className='flex gap-5 '>
