@@ -22,7 +22,7 @@ function GrowthDecay() {
 
   return (
     <>
-      <h2 id="growth" className='text-center text-6xl font-bold text-red-600 pt-32 pb-10'>GROWTH AND DECAY</h2>
+      <h2 id="growth" className='text-center text-3xl lg:text-6xl font-bold text-red-600 pt-32 pb-10'>GROWTH AND DECAY</h2>
 
       <div className="flex items-center justify-center">
         <select

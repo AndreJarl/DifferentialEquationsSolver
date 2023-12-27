@@ -127,7 +127,7 @@ const CoolingHeatingTimeCalculator = () => {
 </div>
 </div>
       {result && (
-       <div className='bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
+       <div className='px-5 bg-red-600 text-white min-w-[250px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
           <p>Constant (k): {result.k}</p>
           <p>Time: {result.timeAtUnknown}</p>
         </div>
