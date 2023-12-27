@@ -25,7 +25,7 @@ function Navbar() {
           <div>
             <ul className='flex gap-2 list-none font-bold text-white text-lg lg:gap-28 lg:text-xl'>
               <div onClick={handleSolveClick}>
-              <li className='hover:text-black hover:cursor-pointer'>Solve</li>
+              <Link to="/"><li className='hover:text-black hover:cursor-pointer'>Solve</li></Link>
                 {showSolveMenu && (
                   <div className='absolute bg-red-200 h-70 text-base px-5 justify-center items-center pb-10 -ml-28 rounded-xl mt-6 text-red-800'>
                     <a href="#class"><li className='pt-10' onClick={handleMenuItemClick}>Classification</li></a>
