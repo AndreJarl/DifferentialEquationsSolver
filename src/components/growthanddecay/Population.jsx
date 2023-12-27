@@ -36,11 +36,11 @@ function SeparableVariable() {
   };
 
   return (
-    <div id='growth' className='flex items-center justify-center flex-col gap-10 pt-10 mx-20'>
+    <div id='growth' className='flex items-center justify-center flex-col gap-10 pt-10 px-20'>
       <p className='text-center text-red-400 text-xl font-semibold scroll  pb-5'>Given:</p>
       <div className='gap-10 flex flex-col lg:flex lg:flex-row justify-center items-center'>
       <div>
-        <label className='text-lg font-semibold text-red-400 gap-3 flex'>
+      <label className='text-lg font-semibold text-red-400 gap-3 flex flex-col'>
           @t(years):
           <input
             className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
@@ -49,7 +49,7 @@ function SeparableVariable() {
         </label>
       </div>
       <div>
-        <label className='text-lg font-semibold text-red-400 gap-3 flex'>
+      <label className='text-lg font-semibold text-red-400 gap-3 flex flex-col'>
           Initial Value (P0):
           <input
             className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
@@ -64,7 +64,7 @@ function SeparableVariable() {
     
      
       <div>
-        <label className='text-lg font-semibold text-red-400 gap-3 flex'>
+        <label className='text-lg font-semibold text-red-400 gap-3 flex flex-col'>
           @t (years):
           <input
             className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
@@ -75,10 +75,10 @@ function SeparableVariable() {
         </label>
       </div>
       <div>
-        <label className='text-lg font-semibold text-red-400 gap-3 flex'>
+      <label className='text-lg font-semibold text-red-400 gap-3 flex flex-col'>
           Population at the time (Pt):
           <input
-            className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
+          className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
             type="number"
             value={pt}
             onChange={(e) => setPt(e.target.value)}
@@ -91,7 +91,7 @@ function SeparableVariable() {
      
 
       <div>
-        <label className='text-lg font-semibold text-red-400 gap-3 flex'>
+      <label className='text-lg font-semibold text-red-400 gap-3 flex flex-col'>
           @t (years):
           <input
             className='text-black font-normal border border-black text-center min-w-[150px] max-w-full'
@@ -107,7 +107,7 @@ function SeparableVariable() {
       </div>
      </div>
       <button className='bg-red-600 px-5 py-1 flex justify-center items-center text-white font-semibold rounded-md text-xl' onClick={solveEquation}>Solve</button>
-      <div className='rounded-xl bg-red-600 text-white min-w-[350px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
+      <div className='rounded-xl bg-red-600 text-white min-w-[150px] md:min-w-[600px] lg:min-w-[600px] max-w-full text-center py-5 mb-10 text-xl font-bold flex flex-col justify-center gap-4 '> 
       
       <div className={`solution ${showSolution ? 'visible' : 'hidden'}`}> 
          <div className='flex flex-col justify-center gap-10 pb-10 pt-10 sm:text-lg'>
