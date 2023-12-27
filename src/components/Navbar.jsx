@@ -23,7 +23,7 @@ function Navbar() {
           </div>
           
           <div>
-            <ul className='flex gap-10 list-none font-bold text-white text-lg lg:gap-28 lg:text-xl'>
+            <ul className='flex gap-2 list-none font-bold text-white text-lg lg:gap-28 lg:text-xl'>
               <div onClick={handleSolveClick}>
               <li className='hover:text-black hover:cursor-pointer'>Solve</li>
                 {showSolveMenu && (

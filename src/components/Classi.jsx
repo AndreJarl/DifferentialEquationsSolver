@@ -55,7 +55,7 @@ const Classi = () => {
           placeholder="Enter a differential equation (e.g., dy/dx = f(x))"
           value={equation}
           onChange={handleInputChange}
-          className="border-2 border-black min-w-[350px] md:min-w-[500px] lg:min-w-[600px] max-w-full h-10 resize-none text-lg pt-1 pl-2 rounded-lg"
+          className="border-2 border-black min-w-[320px] md:min-w-[500px] lg:min-w-[600px] max-w-full h-10 resize-none text-lg pt-1 pl-2 rounded-lg"
         />
        
         <button className='justify-center bg-red-600 px-5 py-2 mb-4 lg:mb-0 rounded-lg text-white font-semi' onClick={classifyEquation}>Classify</button>
@@ -64,8 +64,8 @@ const Classi = () => {
         <p>Differential Equation:</p>
         <p className='text-center'>{eq}</p>
       </div>
-      <div className='mt-10 bg-red-600 rounded-xl min-w-[350px] md:min-w-[600px] lg:min-w-[900px] max-w-full p-8 text-white'>
-        <p className='text-center pb-10 font-bold text-4xl'>Classification:</p>
+      <div className='mt-10 bg-red-600 rounded-xl min-w-[250px] md:min-w-[600px] lg:min-w-[900px] max-w-full p-8 text-white'>
+        <p className='text-center pb-10 font-bold text-2xl'>Classification:</p>
         <ul className='flex gap-5 flex-col'>
           <li><span className='font-bold pr-4'>Dependent Variable:</span>{classification.dependentVariable}</li>
           <li><span className='font-bold pr-4'>Independent Variable:</span> {classification.independentVariable}</li>

@@ -19,7 +19,7 @@ function Newton() {
 
   return (
     <>
-      <h2 id="newton" className="text-center lg:text-5xl font-bold text-red-600 pt-32 pb-10 items-center justify-center text-4xl">
+      <h2 id="newton" className="text-center lg:text-5xl font-bold text-red-600 pt-32 pb-10 items-center justify-center text-2xl">
         NEWTON'S LAW COOLING/HEATING
       </h2>
 
