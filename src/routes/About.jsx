@@ -34,15 +34,15 @@ function About(){
                         <p className="text-xl text-white">Andre Jarl Aniana</p>
                      </div>
                      <div className="flex flex-col justify-center items-center gap-5 bg-red-500 py-5 rounded-lg px-5">
-                        <img className="w-[210px] rounded-md" src={lito} alt="" srcset="" />
+                        <img className="w-[190px] rounded-md" src={lito} alt="" srcset="" />
                         <p className="text-xl text-white">Angelito Valderama</p>
                      </div>
                      <div className="flex flex-col justify-center items-center gap-5 bg-red-500 py-5 rounded-lg px-5">
-                        <img className="w-[200px] rounded-md" src={charles} alt="" srcset="" />
+                        <img className="w-[180px] rounded-md" src={charles} alt="" srcset="" />
                         <p className="text-xl text-white">Charles Zoilo A. Yana</p>
                      </div>
                      <div className="flex flex-col justify-center items-center gap-5 bg-red-500 py-5 rounded-lg px-5">
-                        <img className="w-[190px] rounded-md" src={kath} alt="" srcset="" />
+                        <img className="w-[180px] rounded-md" src={kath} alt="" srcset="" />
                         <p className="text-xl text-white">Katlyn Pearl C. Ibasitas</p>
                      </div>
                      <div className="flex flex-col justify-center items-center gap-5 bg-red-500 py-5 rounded-lg px-5">
